@@ -1,0 +1,54 @@
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f2f2f2;
+  flex-direction: column;
+
+  h1 {
+    color: #333333;
+    margin-bottom: 20px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    background-color: #dcdcdc;
+    width: 350px;
+    gap: 20px;
+
+    input {
+      padding: 10px;
+      border: none;
+      border-bottom: 1px solid gray;
+    }
+
+    button {
+      padding: 10px;
+      border: none;
+      background-color: #333333;
+      cursor: pointer;
+      color: white;
+
+      &:hover {
+        color: white;
+        background-color: #414141;
+      }
+    }
+
+    p {
+      font-size: 15px;
+      color: red;
+      text-align: center;
+    }
+
+    span {
+      font-size: 15px;
+      text-align: center;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+}

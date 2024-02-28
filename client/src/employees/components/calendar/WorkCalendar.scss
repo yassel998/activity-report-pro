@@ -1,0 +1,46 @@
+// WorkCalendar.scss
+
+.react-calendar {
+    .react-calendar__tile--now,
+    .react-calendar__tile--active,
+    .react-calendar__tile--range,
+    .react-calendar__tile--hover {
+      background-color: transparent;
+      color: #333;
+    }
+  
+    .react-calendar__navigation {
+      display: none;
+    }
+  
+    .react-calendar__tile {
+      position: relative;
+  
+      &.weekend {
+        background-color: gray;
+        color: white;
+        pointer-events: none; // Disable click events for weekends
+      }
+  
+      &.disabled {
+        color: #ccc;
+        pointer-events: none; // Disable click events for disabled days
+      }
+  
+      .selected-indicator {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20px; // Adjust as needed
+        height: 20px; // Adjust as needed
+        border-radius: 50%;
+        background-color: lightblue;
+  
+        &.full {
+          width: 100%;
+        }
+      }
+    }
+  }
+  
