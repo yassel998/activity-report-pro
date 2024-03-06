@@ -9,7 +9,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:5173", // Adjust this to match your client's origin
+    origin: "http://localhost:5173", //our client's origin
     credentials: true,
   })
 );

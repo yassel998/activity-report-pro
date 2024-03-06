@@ -1,16 +1,13 @@
 import axios from "axios";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import "./login.scss";
 import { useNavigate } from "react-router-dom";
-import { AuthContext } from "../context/authContext";
 
 export const Login = () => {
   const [inputs, setInputs] = useState({
     email: "",
     password: "",
   });
-
-  const { login } = useContext(AuthContext as AuthContextProps);
 
   const [err, setError] = useState(null);
 

@@ -1,46 +1,78 @@
-// WorkCalendar.scss
+.workCalendar {
+  width: 22rem;
+  height: 22rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-.react-calendar {
-    .react-calendar__tile--now,
-    .react-calendar__tile--active,
-    .react-calendar__tile--range,
-    .react-calendar__tile--hover {
-      background-color: transparent;
-      color: #333;
-    }
-  
-    .react-calendar__navigation {
-      display: none;
-    }
-  
-    .react-calendar__tile {
-      position: relative;
-  
-      &.weekend {
-        background-color: gray;
-        color: white;
-        pointer-events: none; // Disable click events for weekends
-      }
-  
-      &.disabled {
-        color: #ccc;
-        pointer-events: none; // Disable click events for disabled days
-      }
-  
-      .selected-indicator {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 20px; // Adjust as needed
-        height: 20px; // Adjust as needed
-        border-radius: 50%;
-        background-color: lightblue;
-  
-        &.full {
-          width: 100%;
-        }
-      }
-    }
+.workCalendarHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+
+  .date-display {
+    font-size: 18px;
   }
-  
+
+  select {
+    width: 100px;
+    height: 30px;
+  }
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  width: 100%;
+  justify-content: center;
+  margin-top: 10px;
+
+  h6 {
+    font-size: 18px;
+  }
+}
+
+.workCalendarContainer {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+
+.date-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.dates {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #959595;
+  border-radius: 50%;
+  font-size: 16px;
+  background-color: white;
+  color: black;
+
+  &.date-non-working {
+    background-color: grey;
+    color: white;
+  }
+}
+
+.dynamic-number {
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.date-container:not(.date-non-working):hover .dates {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}

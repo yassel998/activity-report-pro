@@ -50,7 +50,7 @@ function App() {
       element: <Login />,
     },
     {
-      path: "/test",
+      path: "/collab",
       element: <HomeCollab />,
     },
   ]);

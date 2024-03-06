@@ -34,7 +34,7 @@ export const register = (req, res) => {
 };
 
 export const login = (req, res) => {
-  //CHECK USER
+  //CHECK USER (if our user is exist or not!)
 
   const q = "SELECT * FROM collaborators WHERE email = ?";
 
@@ -66,7 +66,5 @@ export const login = (req, res) => {
       })
       .status(200)
       .json(other);
-
-    // console.log("Headers:", res.getHeaders());
   });
 };
