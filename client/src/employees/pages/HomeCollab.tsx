@@ -1,10 +1,12 @@
+import OldVersion from "../components/calendar/OldVersion";
 import WorkCalendar from "../components/calendar/WorkCalendar";
 
 const HomeCollab = () => {
   return (
     <div>
       <h1>
-        <WorkCalendar />
+        {/* <WorkCalendar /> */}
+        <OldVersion />
       </h1>
     </div>
   );
